@@ -41,5 +41,8 @@ C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\MyForm.h(209,40): warning C4
 C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\MyForm.h(211,40): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\MyForm.h(221,4): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+  (компиляция исходного файла "MyForm.cpp")
+  
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Parovos.vcxproj -> C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\x64\Debug\Parovos.exe

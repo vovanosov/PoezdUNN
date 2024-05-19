@@ -34,8 +34,8 @@
               "Title": "MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h",
               "RelativeDocumentMoniker": "Parovos\\MyForm.h",
-              "ToolTip": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "Parovos\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Parovos\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-19T12:47:02.941Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
@@ -46,9 +46,9 @@
               "Title": "MyForm.h",
               "DocumentMoniker": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h",
               "RelativeDocumentMoniker": "Parovos\\MyForm.h",
-              "ToolTip": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h*",
-              "RelativeToolTip": "Parovos\\MyForm.h*",
-              "ViewState": "AQIAAMwAAAAAAAAAAAAAANoAAAAQAAAA",
+              "ToolTip": "C:\\Users\\Vova\\Documents\\MYPROGRAMS\\PoezdUNN\\Parovos\\MyForm.h",
+              "RelativeToolTip": "Parovos\\MyForm.h",
+              "ViewState": "AQIAAMwAAAAAAAAAAAAAANsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-19T12:47:17.801Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Parovos\\Classes.h",
               "ViewState": "AQIAAGMBAAAAAAAAAAAQwNwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-19T06:05:25.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T06:05:25.741Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Parovos\\MyForm.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-19T06:05:21.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T06:05:21.601Z"
             }
           ]
         }
