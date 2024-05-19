@@ -1,26 +1,32 @@
 ﻿  MyForm.cpp
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(226,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(233,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(226,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(234,9): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(237,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,34): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(237,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(238,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,18): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(238,34): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(228,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(238,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(228,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(238,18): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(239,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(239,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
 C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\MyForm.h(205,40): warning C4244: +=: преобразование "double" в "int", возможна потеря данных

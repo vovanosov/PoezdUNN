@@ -20,5 +20,9 @@ Class Parovos.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Fields:
     System.Drawing.Graphics g : Public
     train* w : Public
+    Int32 X : Public
+    Int32 Y : Public
+    Int32 H : Public
+    Int32 N : Public
   Methods:
     btn_start_Click(Object, EventArgs): PrivateScope, Public, HideBySig

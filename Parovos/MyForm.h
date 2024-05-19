@@ -29,6 +29,7 @@ namespace Parovos {
 	private: System::Windows::Forms::Label^ label4;
 	public:
 		train* w;
+		int X = 0, Y = 0, H = 0, N = 0;
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -194,8 +195,7 @@ namespace Parovos {
 #pragma endregion
 
 	public: System::Void btn_start_Click(System::Object^ sender, System::EventArgs^ e) {
-		int X = 0, Y = 0, H = 0, N = 0;
-
+		X = 0, Y = 0, H = 0, N = 0;
 		String^ tX = this->textX->Text;
 		String^ tY = this->textY->Text;
 		String^ tH = this->textH->Text;
@@ -218,7 +218,7 @@ namespace Parovos {
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
 		g = this->CreateGraphics();
 		g->Clear(Color::Azure);
-		w->move(20);
+		w->move(H/4);
 		w->draw(g);
 	}
 	private: System::Void textX_TextChanged(System::Object^ sender, System::EventArgs^ e) {
