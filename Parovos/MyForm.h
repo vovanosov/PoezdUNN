@@ -16,6 +16,11 @@ namespace Parovos {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+	private: System::Windows::Forms::TextBox^ textX;
+	private: System::Windows::Forms::TextBox^ textY;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label1;
+
 	public:
 		Graphics^ g;
 		train* w;
@@ -57,12 +62,16 @@ namespace Parovos {
 		{
 			this->btn_start = (gcnew System::Windows::Forms::Button());
 			this->btn_go = (gcnew System::Windows::Forms::Button());
+			this->textX = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textY = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// btn_start
 			// 
-			this->btn_start->Location = System::Drawing::Point(371, 79);
-			this->btn_start->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_start->Location = System::Drawing::Point(774, 84);
+			this->btn_start->Margin = System::Windows::Forms::Padding(2);
 			this->btn_start->Name = L"btn_start";
 			this->btn_start->Size = System::Drawing::Size(85, 35);
 			this->btn_start->TabIndex = 0;
@@ -72,8 +81,8 @@ namespace Parovos {
 			// 
 			// btn_go
 			// 
-			this->btn_go->Location = System::Drawing::Point(371, 158);
-			this->btn_go->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_go->Location = System::Drawing::Point(774, 156);
+			this->btn_go->Margin = System::Windows::Forms::Padding(2);
 			this->btn_go->Name = L"btn_go";
 			this->btn_go->Size = System::Drawing::Size(85, 40);
 			this->btn_go->TabIndex = 1;
@@ -81,33 +90,87 @@ namespace Parovos {
 			this->btn_go->UseVisualStyleBackColor = true;
 			this->btn_go->Click += gcnew System::EventHandler(this, &MyForm::btn_go_Click);
 			// 
+			// textX
+			// 
+			this->textX->Location = System::Drawing::Point(112, 26);
+			this->textX->Name = L"textX";
+			this->textX->Size = System::Drawing::Size(68, 20);
+			this->textX->TabIndex = 2;
+			this->textX->TextChanged += gcnew System::EventHandler(this, &MyForm::textX_TextChanged);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(92, 29);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(14, 13);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"X";
+			// 
+			// textY
+			// 
+			this->textY->Location = System::Drawing::Point(272, 29);
+			this->textY->Name = L"textY";
+			this->textY->Size = System::Drawing::Size(68, 20);
+			this->textY->TabIndex = 4;
+			this->textY->TextChanged += gcnew System::EventHandler(this, &MyForm::textY_TextChanged);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(252, 33);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(14, 13);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"Y";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(813, 323);
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->ClientSize = System::Drawing::Size(882, 453);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->textY);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->textX);
 			this->Controls->Add(this->btn_go);
 			this->Controls->Add(this->btn_start);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 	
 #pragma endregion
 
 	public: System::Void btn_start_Click(System::Object^ sender, System::EventArgs^ e) {
+		int X = 0, Y = 0;
+
+		String^ tX = this->textX->Text;
+		String^ tY = this->textY->Text;
+
+		for (int i = 0; i < tX->Length; i++)
+			X += (tX[tX->Length - 1 - i] - '0') * pow(10, i);
+		for (int i = 0; i < tY->Length; i++)
+			Y += (tY[tY->Length - 1 - i] - '0') * pow(10, i);
+		
 		g = this->CreateGraphics();
-		w = new train(500, 200, 10,1);
+		g->Clear(Color::Azure);
+		w = new train(X, Y, 10,1);
 		w->draw(g);
 	}
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
 		g = this->CreateGraphics();
-		g->Clear(Color::White);
+		g->Clear(Color::Azure);
 		w->move(20);
 		w->draw(g);
 	}
-	};
+	private: System::Void textX_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void textY_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }
