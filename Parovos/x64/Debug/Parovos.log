@@ -1,11 +1,27 @@
 ﻿  MyForm.cpp
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(218,31): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(218,24): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(219,41): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(219,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(219,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(219,18): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(220,32): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Vova\source\repos\Parovos\Parovos\Classes.h(220,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Parovos.vcxproj -> C:\Users\Vova\source\repos\Parovos\x64\Debug\Parovos.exe
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(226,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(226,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,34): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(227,18): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(228,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\Parovos\Classes.h(228,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Parovos.vcxproj -> C:\Users\Vova\Documents\MYPROGRAMS\PoezdUNN\x64\Debug\Parovos.exe

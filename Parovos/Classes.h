@@ -2,6 +2,7 @@
 #include <math.h>
 #include <iostream>
 
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -193,28 +194,35 @@ class Engine
 	Myline left;
 	Myline middle;
 	Myline right;
-	int xm, ym, hm;
+	int xm, ym, hm, xmm, ymm;
 public:
 	Engine(int x_m, int y_m, int h)
 	{
 		left = Myline(x_m, y_m, x_m, y_m - h);
 		middle = Myline(x_m, y_m - h, x_m + 10 * h, y_m - h);
-		right = Myline(x_m + 10 * h, y_m, x_m + 10 * h, y_m-h);
-		xm = x_m; ym = y_m; hm = h;
+		right = Myline(x_m + 10 * h, y_m, x_m + 10 * h, y_m - h);
+		xm = x_m; ym = y_m; hm = h; 
+		xmm = x_m; //center x
+		ymm = y_m-h; //center y
 	}
+
 	void Move(int d_x)
 	{
 		double l = hm;
 		double R = hm * 2;
 		double sina=d_x/R; //математика
 		double cosa = sqrt(1 - sina * sina);
-		double c=2*l*l-2*cosa*l*l; // если мы наоборот, будем знать чему равно расстояние от начальной до конечной точки, то наоборот выражаем угол и находим координаты конечной точки
-		double dx_m = c*cosa;
-		double dy_m = c*sina; 
-		//if (ym-hm+dx_m >= ym)
-			//dx_m = -dx_m;
-		//if (xm <= hm * 4)
-			//dy_m = -dy_m;
+		double c = 2*l*l-2*cosa*l*l; // если мы наоборот, будем знать чему равно расстояние от начальной до конечной точки, то наоборот выражаем угол и находим координаты конечной точки
+		double dx_m = 0;//c*cosa;
+		double dy_m = 0;// c* sina;
+		/*if ((xm < xmm && ym - hm == ymm))
+			dx_m = -dx_m;
+		if ((xm == xmm && ym - hm > ymm))
+			dy_m = -dy_m;
+		xm += d_x + dx_m;
+		ym += dy_m;
+		xmm += d_x;*/
+		//std::cout << xm << " " << ym << std::endl;
 		left.Move(d_x, 0, d_x+dx_m, dy_m);
 		middle.Move(d_x+dx_m, dy_m, d_x+dx_m, dy_m);
 		right.Move(d_x, 0, d_x+dx_m, dy_m);
@@ -326,14 +334,14 @@ public:
 			lines[i] = tmp.lines[i];
 		}
 		//delete Mai;
-		//Mai = new parovos(tmp);
+		Mai = tmp.Mai;
 		return *this;
 	}
 	
 	/*~train()
 	{
-		delete[] Mai;
-		delete[] much;
+		delete Mai;
+		delete much;
 		delete[] lines;
 	}*/
 	

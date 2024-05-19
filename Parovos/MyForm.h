@@ -17,6 +17,8 @@ namespace Parovos {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+		Graphics^ g;
+		train* w;
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -59,9 +61,10 @@ namespace Parovos {
 			// 
 			// btn_start
 			// 
-			this->btn_start->Location = System::Drawing::Point(556, 121);
+			this->btn_start->Location = System::Drawing::Point(371, 79);
+			this->btn_start->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_start->Name = L"btn_start";
-			this->btn_start->Size = System::Drawing::Size(128, 54);
+			this->btn_start->Size = System::Drawing::Size(85, 35);
 			this->btn_start->TabIndex = 0;
 			this->btn_start->Text = L"Start";
 			this->btn_start->UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@ namespace Parovos {
 			// 
 			// btn_go
 			// 
-			this->btn_go->Location = System::Drawing::Point(556, 243);
+			this->btn_go->Location = System::Drawing::Point(371, 158);
+			this->btn_go->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_go->Name = L"btn_go";
-			this->btn_go->Size = System::Drawing::Size(128, 62);
+			this->btn_go->Size = System::Drawing::Size(85, 40);
 			this->btn_go->TabIndex = 1;
 			this->btn_go->Text = L"Go";
 			this->btn_go->UseVisualStyleBackColor = true;
@@ -79,27 +83,31 @@ namespace Parovos {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1220, 497);
+			this->BackColor = System::Drawing::SystemColors::Window;
+			this->ClientSize = System::Drawing::Size(813, 323);
 			this->Controls->Add(this->btn_go);
 			this->Controls->Add(this->btn_start);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
+
 		}
 	
 #pragma endregion
 
 	public: System::Void btn_start_Click(System::Object^ sender, System::EventArgs^ e) {
-		Graphics^ g = this->CreateGraphics();
-		train w(500, 200, 10,1);
-		train v(w);
-		v.draw(g);
+		g = this->CreateGraphics();
+		w = new train(500, 200, 10,1);
+		w->draw(g);
 	}
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		g = this->CreateGraphics();
+		g->Clear(Color::White);
+		w->move(20);
+		w->draw(g);
 	}
 	};
 }
