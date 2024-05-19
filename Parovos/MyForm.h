@@ -23,6 +23,9 @@ namespace Parovos {
 
 	public:
 		Graphics^ g;
+	private: System::Windows::Forms::TextBox^ textH;
+	private: System::Windows::Forms::Label^ label3;
+	public:
 		train* w;
 		MyForm(void)
 		{
@@ -51,7 +54,7 @@ namespace Parovos {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -66,6 +69,8 @@ namespace Parovos {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textY = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->textH = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// btn_start
@@ -124,12 +129,31 @@ namespace Parovos {
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Y";
 			// 
+			// textH
+			// 
+			this->textH->Location = System::Drawing::Point(430, 30);
+			this->textH->Name = L"textH";
+			this->textH->Size = System::Drawing::Size(68, 20);
+			this->textH->TabIndex = 6;
+			this->textH->TextChanged += gcnew System::EventHandler(this, &MyForm::textH_TextChanged);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(410, 33);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(15, 13);
+			this->label3->TabIndex = 7;
+			this->label3->Text = L"H";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(882, 453);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->textH);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textY);
 			this->Controls->Add(this->label1);
@@ -143,23 +167,26 @@ namespace Parovos {
 			this->PerformLayout();
 
 		}
-	
+
 #pragma endregion
 
 	public: System::Void btn_start_Click(System::Object^ sender, System::EventArgs^ e) {
-		int X = 0, Y = 0;
+		int X = 0, Y = 0, H = 0;
 
 		String^ tX = this->textX->Text;
 		String^ tY = this->textY->Text;
+		String^ tH = this->textH->Text;
 
 		for (int i = 0; i < tX->Length; i++)
 			X += (tX[tX->Length - 1 - i] - '0') * pow(10, i);
 		for (int i = 0; i < tY->Length; i++)
 			Y += (tY[tY->Length - 1 - i] - '0') * pow(10, i);
-		
+		for (int i = 0; i < tH->Length; i++)
+			H += (tH[tH->Length - 1 - i] - '0') * pow(10, i);
+
 		g = this->CreateGraphics();
 		g->Clear(Color::Azure);
-		w = new train(X, Y, 10,1);
+		w = new train(X, Y, H, 1);
 		w->draw(g);
 	}
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -170,7 +197,9 @@ namespace Parovos {
 	}
 	private: System::Void textX_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void textY_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void textY_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textH_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
 };
 }
