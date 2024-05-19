@@ -1,0 +1,4 @@
+C:\Users\Vova\source\repos\Parovos\Parovos\x64\Debug\Parovos.vcxproj.AssemblyReference.cache
+C:\Users\Vova\source\repos\Parovos\Parovos\x64\Debug\Parovos.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Vova\source\repos\Parovos\Parovos\x64\Debug\Parovos.MyForm.resources
+C:\Users\Vova\source\repos\Parovos\Parovos\x64\Debug\Parovos.vcxproj.GenerateResource.cache
