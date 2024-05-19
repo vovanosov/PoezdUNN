@@ -96,13 +96,7 @@ namespace Parovos {
 		Graphics^ g = this->CreateGraphics();
 		train w(500, 200, 10,1);
 		train v(w);
-		for (int i = 0; i < 1; i++) {
-			w.move(10);
-			v = w;
-			v.draw(g);
-		}
-		
-		
+		v.draw(g);
 	}
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
 
