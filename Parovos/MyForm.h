@@ -217,10 +217,18 @@ namespace Parovos {
 	}
 	private: System::Void btn_go_Click(System::Object^ sender, System::EventArgs^ e) {
 		g = this->CreateGraphics();
+		int pr = 1;
+		for (int i = 2; i < sqrt(H); i++)
+		{
+			if (H % i == 0)
+			{
+				pr = H / i;
+			}
+		}
 		for (int i = 0; i < 50; i++) {
 			_sleep(10);
 			g->Clear(Color::Azure);
-			w->move(H / 4);
+			w->move(H / pr);
 			w->draw(g);
 		}
 	}
